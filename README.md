@@ -25,7 +25,7 @@ Or install it yourself as:
 ## Usage
 Setup the client for testing
 ```ruby
-client = Multisafepay::Client.new(api_key: 'REPLACE WITH API KEY')
+client = Multisafepay::Client.new(api_key: 'REPLACE WITH API KEY', env: :test)
 ```
 Creating a test order
 ```ruby
