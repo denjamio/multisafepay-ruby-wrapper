@@ -1,6 +1,6 @@
 module Multisafepay
   class TokensResource < Resource
-    def generate
+    def create
       Token.new get_request("auth/api_token")
     end
 
