@@ -9,7 +9,7 @@ module Multisafepay
     end
 
     def payouts(affiliated_id:, **attributes)
-      post_request("accounts/#{affiliated_id}payouts", body: attributes)
+      post_request("accounts/#{affiliated_id}/payouts", body: attributes)
     end
   end
 end

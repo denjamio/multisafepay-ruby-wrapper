@@ -1,6 +1,6 @@
 module Multisafepay
   class TokensResource < Resource
-    def find(your_customer_reference:, your_token: nil)
+    def retrieve(your_customer_reference:, your_token: nil)
       url = your_token.nil? ? "recurring/#{your_customer_reference}" : "recurring/#{your_customer_reference}/token/#{your_token}"
       get_request(url)
     end

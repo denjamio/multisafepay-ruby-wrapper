@@ -1,10 +1,10 @@
 module Multisafepay
   class GatewaysResource < Resource
-    def all
+    def list
       get_request("gateways")
     end
 
-    def find(id:)
+    def retrieve(id)
       get_request("gateways/#{id}")
     end
   end

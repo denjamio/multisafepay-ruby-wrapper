@@ -1,19 +1,19 @@
 module Multisafepay
   class OrdersResource < Resource
-    def find(order_id:)
-      get_request("orders/#{order_id}")
+    def retrieve(id)
+      get_request("orders/#{id}")
     end
 
     def create(**attributes)
       post_request("orders", body: attributes)
     end
 
-    def update(order_id:, **attributes)
-      patch_request("orders/#{order_id}", body: attributes)
+    def update(id:, **attributes)
+      patch_request("orders/#{id}", body: attributes)
     end
 
-    def delete(order_id:)
-      delete_request("orders/#{order_id}")
+    def delete(id:, **attributes)
+      patch_request("orders/#{id}", body: attributes)
     end
   end
 end

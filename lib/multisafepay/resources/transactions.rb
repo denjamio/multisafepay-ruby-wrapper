@@ -1,6 +1,6 @@
 module Multisafepay
   class TransactionsResource < Resource
-    def all
+    def list
       get_request("transactions")
     end
   end
