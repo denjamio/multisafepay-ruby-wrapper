@@ -42,7 +42,7 @@ module Multisafepay
         raise Error, "Unable to perform the request due to server-side problems. #{response.body["error"]}"
       end
 
-      response
+      response.body
     end
   end
 end

@@ -1,7 +1,7 @@
 module Multisafepay
   class TransactionsResource < Resource
     def list
-      get_request("transactions")
+      Transaction.new get_request("transactions")
     end
   end
 end
