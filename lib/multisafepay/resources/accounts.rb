@@ -1,5 +1,5 @@
 module Multisafepay
-  class AccountResource < Resource
+  class AccountsResource < Resource
     def balances(affiliated_id:)
       Account.new get_request("accounts/#{affiliated_id}/balances")
     end

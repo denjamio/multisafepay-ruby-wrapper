@@ -8,8 +8,12 @@ module Multisafepay
       @adapter = adapter
     end
 
-    def account
+    def accounts
       AccountResource.new(self)
+    end
+
+    def capture
+      CaptureResource.new(self)
     end
 
     def gateways

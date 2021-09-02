@@ -4,17 +4,17 @@ module Multisafepay
       Token.new get_request("auth/api_token")
     end
 
-    def retrieve(your_customer_reference:, your_token: nil)
-      url = your_token.nil? ? "recurring/#{your_customer_reference}" : "recurring/#{your_customer_reference}/token/#{your_token}"
+    def find(customer_reference:, token: nil)
+      url = token.nil? ? "recurring/#{customer_reference}" : "recurring/#{customer_reference}/token/#{token}"
       Token.new get_request(url)
     end
 
-    def update(your_customer_reference:, your_token:, **attributes)
-      Token.new patch_request("recurring/#{your_customer_reference}/update/#{your_token}", body: attributes)
+    def update(customer_reference:, token:, **attributes)
+      Token.new patch_request("recurring/#{customer_reference}/update/#{token}", body: attributes)
     end
 
-    def delete(your_customer_reference:, your_token:)
-      Token.new delete_request("recurring/#{your_customer_reference}/token/#{your_token}")
+    def delete(customer_reference:, token:)
+      Token.new delete_request("recurring/#{customer_reference}/token/#{token}")
     end
   end
 end
