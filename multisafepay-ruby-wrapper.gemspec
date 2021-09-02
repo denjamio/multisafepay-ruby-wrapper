@@ -1,15 +1,18 @@
 require_relative "lib/multisafepay/version"
 
 Gem::Specification.new do |gem|
-  gem.name = "multisafepay-ruby-multisafepay"
+  gem.name = "multisafepay-ruby-wrapper"
   gem.version = Multisafepay::VERSION
-  gem.authors = ["Diego"]
+  gem.authors = ["denjamio"]
   gem.email = ["denjamio@gmail.com"]
 
   gem.summary = "Unofficial MultiSafePay API Library for Ruby"
   gem.description = "Unofficial MultiSafePay API Library for Ruby. Simplifies integrating with the MultiSafePay API."
   gem.homepage = "https://github.com/denjamio/multisafepay-ruby-wrapper"
   gem.license = "MIT"
+
+  gem.metadata["homepage_uri"] = gem.homepage
+  gem.metadata["source_code_uri"] = gem.homepage
 
   gem.required_ruby_version = ">= 2.3"
 
