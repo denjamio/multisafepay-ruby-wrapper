@@ -31,15 +31,16 @@ module Multisafepay
     def handle_response(response)
       case response.status
       when 400
-        raise Error, "Request malformed. #{response.body["error"]}"
+        raise Error, "Request malformed. #{response.body["error_info"]}"
       when 401
-        raise Error, "Invalid api_key. #{response.body["error"]}"
+        raise Error, "Invalid api_key. #{response.body["error_info"]}"
       when 403
         raise Error, "Action not allowed. #{response.body}"
       when 404
-        raise Error, "No results. #{response.body["error"]}"
+        puts response.body
+        raise Error, "No results. #{response.body["error_info"]}"
       when 500
-        raise Error, "Unable to perform the request due to server-side problems. #{response.body["error"]}"
+        raise Error, "Unable to perform the request due to server-side problems. #{response.body["error_info"]}"
       end
 
       response.body
