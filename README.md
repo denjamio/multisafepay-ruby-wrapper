@@ -11,7 +11,7 @@ This wrapper simplifies working with the MultiSafepay API and allows you to inte
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'multisafepay-ruby-multisafepay'
+gem 'multisafepay-ruby-wrapper'
 ```
 
 And then execute:
