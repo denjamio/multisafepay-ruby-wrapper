@@ -33,8 +33,7 @@ module Multisafepay
     end
 
     def connection
-      @connection ||= Faraday.new do |conn|
-        conn.url_prefix = base_url
+      @connection ||= Faraday.new(base_url) do |conn|
         conn.headers["api_key"] = api_key
         conn.request :json
 
