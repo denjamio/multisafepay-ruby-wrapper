@@ -8,11 +8,6 @@ module Multisafepay
       @adapter = adapter
     end
 
-    def prueba(id:, **payload)
-      puts "PAYLOAD: #{payload}"
-      puts "ID: #{id}"
-    end
-
     def accounts
       AccountsResource.new(self)
     end
