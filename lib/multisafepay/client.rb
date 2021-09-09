@@ -8,7 +8,7 @@ module Multisafepay
       @adapter = adapter
     end
 
-    def accounts
+    def account
       AccountResource.new(self)
     end
 

@@ -1,27 +1,27 @@
 module Multisafepay
   class OrdersResource < Resource
-    def retrieve(id:)
+    def retrieve(id)
       Order.new get_request("orders/#{id}")
     end
 
-    def create(**attributes)
-      Order.new post_request("orders", body: attributes)
+    def create(**payload)
+      Order.new post_request("orders", body: payload)
     end
 
-    def update(**attributes)
-      Order.new patch_request("orders/#{attributes.fetch(:id)}", body: attributes)
+    def update(id, payload = {})
+      Order.new patch_request("orders/#{id}", body: payload)
     end
 
-    def cancel(id:, **attributes)
-      Order.new patch_request("orders/#{id}", body: attributes)
+    def cancel(id, payload = {})
+      Order.new patch_request("orders/#{id}", body: payload)
     end
 
-    def capture(id:, **attributes)
-      Order.new post_request("orders/#{id}/capture", body: attributes)
+    def capture(id, payload = {})
+      Order.new post_request("orders/#{id}/capture", body: payload)
     end
 
-    def refund(**attributes)
-      Order.new post_request("orders/#{attributes.fetch(:order_id)}/refunds", body: attributes)
+    def refund(id, payload = {})
+      Order.new post_request("orders/#{id}/refunds", body: payload)
     end
   end
 end

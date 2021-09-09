@@ -8,7 +8,7 @@ module Multisafepay
   autoload :Object, "multisafepay/object"
   autoload :Resource, "multisafepay/resource"
 
-  autoload :AccountsResource, "multisafepay/resources/accounts"
+  autoload :AccountResource, "multisafepay/resources/account"
   autoload :CaptureResource, "multisafepay/resources/capture"
   autoload :GatewaysResource, "multisafepay/resources/gateways"
   autoload :OrdersResource, "multisafepay/resources/orders"

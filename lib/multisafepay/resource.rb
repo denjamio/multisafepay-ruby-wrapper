@@ -37,7 +37,6 @@ module Multisafepay
       when 403
         raise Error, "Action not allowed. #{response.body}"
       when 404
-        puts response.body
         raise Error, "No results. #{response.body["error_info"]}"
       when 500
         raise Error, "Unable to perform the request due to server-side problems. #{response.body["error_info"]}"

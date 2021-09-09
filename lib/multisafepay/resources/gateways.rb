@@ -4,7 +4,7 @@ module Multisafepay
       Gateway.new get_request("gateways", params: params)
     end
 
-    def retrieve(id:, **params)
+    def retrieve(id, params = {})
       Gateway.new get_request("gateways/#{id}", params: params)
     end
   end
