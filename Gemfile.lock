@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    multisafepay-ruby-wrapper (0.4.1)
+    multisafepay-ruby-wrapper (0.4.2)
       faraday (~> 1.7)
       faraday_middleware (~> 1.1)
 

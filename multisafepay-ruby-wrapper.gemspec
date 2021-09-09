@@ -14,7 +14,7 @@ Gem::Specification.new do |gem|
   gem.metadata["homepage_uri"] = gem.homepage
   gem.metadata["source_code_uri"] = gem.homepage
 
-  gem.required_ruby_version = ">= 2.3"
+  gem.required_ruby_version = ">= 2.4"
 
   gem.files = Dir.chdir(File.expand_path(__dir__)) do
     `git ls-files -z`.split("\x0").reject { |f| f.match(%r{\A(?:test|spec|features)/}) }
