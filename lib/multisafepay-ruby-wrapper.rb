@@ -21,4 +21,6 @@ module Multisafepay
   autoload :Order, "multisafepay/objects/order"
   autoload :Token, "multisafepay/objects/token"
   autoload :Transaction, "multisafepay/objects/transaction"
+
+  autoload :SignatureValidator, "multisafepay/utils/signature_validator"
 end
